@@ -1,0 +1,334 @@
+/**
+ * HTML5 And CSS3 Theme version 1.2
+ * By Jayj.dk 2009-2010
+ * Download for free at http://jayj.dk/a-free-html5-and-css3-theme/
+ 
+	Released under New BSD License
+	http://www.opensource.org/licenses/bsd-license.php
+	 
+	Copyright (c) 2009-2010, Jayj.dk
+	All rights reserved.
+	
+	Redistribution and use in source and binary forms, with or without modification,
+	are permitted provided that the following conditions are met:
+	
+		* Redistributions of source code must retain the above copyright notice,
+		  this list of conditions and the following disclaimer.
+	
+		* Redistributions in binary form must reproduce the above copyright notice,
+		  this list of conditions and the following disclaimer in the documentation
+		  and/or other materials provided with the distribution.
+	
+		* Neither the name of Jayj.dk nor the names of its
+		  contributors may be used to endorse or promote products derived from this
+		  software without specific prior written permission.
+	
+	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+	DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+	ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+	ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
+/* Reset.css */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, q, small, strong, sub, sup, tt, var,
+ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+ul, ol { list-style: none;}
+img { border: none; }
+:focus { outline: 0; }
+ins { text-decoration: underline; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+/* End reset */
+
+body { 
+	background: #E9E2D0 url(/img/bg.png) repeat;
+	color: #333333;
+	font: 14px/24px Helvetica, sans-serif;
+}
+
+/* HTML5 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+/* Typography and default stuff */
+
+a {
+	color: #889770;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:visited {
+  color: #636f4f;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+p, dl, hr, h1, h2, h3, h4, h5, h6,
+ol, ul, pre, table, fieldset, blockquote, .widget {
+	margin-bottom: 20px;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 36px; font-weight: bold; text-shadow: 1px 1px 2px #FBF2E3; margin-bottom: 15px; }
+h4 { font-size: 23px; }
+h5 { font-size: 19px; }
+h6 { font-size: 16px; }
+
+#header h1, h2, h3 {
+	font-family: 'Vollkorn', serif; 
+}
+
+hr { border: 0 solid #ccc; border-top-width: 1px; clear: both; height: 0; }
+ol { list-style: decimal; }
+ul { list-style: disc; }
+li { margin-left: 30px; }
+
+/* Header */
+
+#header {
+  margin-top: 40px;
+  height: 25px;
+}
+
+#header h1 a {
+	color: black;
+	font-size: 66px;
+	text-shadow: 1px 1px 2px #FBF2E3;
+}
+
+/* Content */
+#content { 
+	background: url(/img/content_bg.png) repeat; /* Fallback for browser that doesn't support rgba */
+	background: rgba(255, 255, 255, .4);
+	border: 3px solid #889770;
+	float: left;
+	width: 940px;
+	padding: 15px 10px 5px 10px;
+}
+
+
+/* Sidebar */
+
+.widget {
+	overflow: hidden;
+	padding-top: 5px;
+}
+
+.widget li { 
+  margin-bottom: 6px;
+  line-height: 1.3em;
+}
+
+/* Footer */
+#footer { 
+	margin: 10px 0 30px 20px;
+}
+
+#footer a {
+	color: #111;
+	padding: 2px 3px;
+}
+
+#footer p { margin: 0; }
+
+/* Form */
+
+input[type=text],
+input[type=email],
+textarea {
+	background: white;
+	border: 1px solid #889770;
+	padding: 6px 5px;
+	font-size: 1em;
+	font-family: Helvetica, sans-serif;
+	-webkit-box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.65);
+	-moz-box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.65);
+	box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.65);
+}
+
+input[type=text]:hover, input[type=text]:focus,
+input[type=email]:hover, input[type=email]:focus,
+textarea:hover, textarea:focus {
+	text-shadow: 1px 1px 0 #eae7e7;
+}
+
+button  {
+	background: #E9E2D0;
+	font-size: 18px;
+	cursor: pointer;
+	vertical-align: middle;
+	border-radius: 3px;
+	border-color: #889770;
+	font-family: 'Vollkorn', serif; 
+}
+
+button:hover {
+}
+
+#message {
+  width: 530px;
+}
+
+.translation {
+	margin-bottom: 10px;
+}
+
+.message {
+	background:white;
+	padding: 3px 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+.language {
+	font-weight: bold;
+}
+
+#share {
+	display: none;
+	padding-top: 5px;
+}
+
+#share p {
+  margin-bottom: 10px;
+}
+
+.round {
+  border-bottom: 1px solid #636f4f;
+  line-height: 1.3em;
+  margin-bottom: 5px;
+}
+
+.round:hover {
+  background: #E9E2D0;
+}
+
+.views {
+  float:right;
+  font-size: 10px;
+}
+
+.web_thumb {
+  border: 1px solid black;
+  cursor: pointer;
+  width: 100%;
+  height: 100%; 
+}
+
+#web_wrapper {
+  margin: auto;
+  background: url(/img/content_bg.png) repeat; /* Fallback for browser that doesn't support rgba */
+	background: rgba(255, 255, 255, .4);
+	border: 3px solid #889770;
+}
+
+#web_details h3 {
+  font-size: 24px;
+  word-wrap: break-word;
+}
+
+#web_graph {
+  float: left;
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+#web_wait_msg {
+  font-size: 16px;
+  margin-top: 30%;
+}
+
+#web_wait_quote {
+  margin-top: 10px;
+  border-top: 2px dashed #889770;
+  padding-top: 10px;
+  border-bottom: 2px dashed #889770;
+}
+
+.quote_text {
+  font-family: 'Vollkorn', serif;
+  font-size: 24px;
+}
+
+.quote_author {
+  text-align: right;
+}
+
+#web_sidebar {
+  border-left: 3px solid #889770;
+  float: left;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+#web_details img {
+  border: 1px solid black;
+  height: 160px;
+}
+
+#web_nav {
+  position: absolute;
+  bottom: 30px;
+}
+
+#search_results div {
+  clear: left;
+  height: 90px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+
+#search_results div:hover {
+  background: #E9E2D0;
+}
+
+.result_thumb {
+   float: left;
+   margin-right: 5px;
+   width: 80px;
+}
+
+.result_thumb img {
+   height: 80px;
+   margin: auto;
+}
+
+.result_title {
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Vollkorn', serif;
+}
+
+.result_author {
+  font-size: 16p;
+}

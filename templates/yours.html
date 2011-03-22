@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Similarity Web: Yours {% endblock %}
+{% block content %}
+
+      <p>Here are the books you've generated webs for. <a href="/">Send some more!</a></p>
+	
+      <div id="yours"></div>
+      
+      <p style="margin-top 10px; font-size: smaller">Note: This information is stored only in your browser, and it may not be 100% accurate.</p>
+{% endblock %}
+{% block script %}
+<script>
+$(document).ready(initYours);
+</script>
+{% endblock %}

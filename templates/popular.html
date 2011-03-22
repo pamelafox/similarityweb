@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Similarity Web: Popular {% endblock %}
+{% block content %}
+
+      <p>Here are some of the most viewed similarity webs.</p>
+	
+      <div id="popular"></div>
+
+{% endblock %}
+{% block script %}
+<script>
+$(document).ready(initPopular);
+</script>
+{% endblock %}

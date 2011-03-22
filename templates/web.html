@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>{% block title %}Similarity Web{% endblock %}</title>
+    <link href="css/960.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css?v=40" rel="stylesheet" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Vollkorn:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
+</head>
+
+<body>
+ <div id="web_wrapper">
+   <div id="web_graph">
+     <div id="web_wait_msg"></div>
+     <div id="web_wait_quote"></div>
+   </div>
+   <div id="web_sidebar">
+      <div id="web_details">
+        <p>Hover over the thumbnails for more details,
+        and click the thumbnails to visit the book on Amazon.
+        </p>
+      </div>
+      <div id="web_nav">
+        <p>Like this web? You can also...</p>
+        <p><a href="/">Create a new web</a> or <br>
+        Browse <a href="/popular">popular</a> & <a href="/recent">recent</a> webs.</p>
+      </div>
+   </div>
+ </div>
+ 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/script.js?v=40"></script> 
+<script src="/js/jit-yc.js"></script>
+<script>
+$(document).ready(initWeb);
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-964209-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

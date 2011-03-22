@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Show a "Please Upgrade" box to both IE7 and IE6 users (Edit to IE 6 if you just want to show it to IE6 users) - jQuery will load the content from js/ie.html into the div -->
+    
+    <!--[if lte IE 7]>
+        <div class="ie grid_7"></div>
+    <![endif]-->
+    
+    <div id="main" class="grid_8 alpha">
+      
+      <p>You can use this web app to view the similarity web for a given Amazon product, using the same data that Amazon.com uses for the "Customers who bought this item also bought..." area.
+      </p>
+      
+      <div>
+	    <form onsubmit="searchBooks(); return false;">
+	      <label for="keywords">Enter search terms to find a book:</label>
+		    <input id="keywords" type="text" value="" maxlength="250">
+	        <button type="submit">Search</button>
+        </form>
+      </div>
+      
+      <div id="search_results">
+      </div>
+    
+    </div>
+    
+    <div id="sidebar" class="grid_4 omega">
+    
+      <aside id="recent_section" class="widget">
+        <h3>Recent:</h3>
+        <div id="recent"></div>
+        <a href="/recent">See more</a>
+      </aside>
+
+      <aside id="popular_section" class="widget">
+        <h3>Popular:</h3>
+ 	    <div id="popular"></div>
+        <a href="/popular">See more</a>
+      </aside>
+      
+      <aside id="yours_section" class="widget" style="display:none;">
+        <h3>Yours:</h3>
+ 	    <div id="yours"></div>
+        <a href="/yours">See more</a>
+      </aside>
+    </div>
+
+{% endblock %}
+{% block script %}
+<script>
+$(document).ready(initMain);
+</script>
+{% endblock %}

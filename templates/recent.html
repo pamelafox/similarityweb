@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Similarity Web: Recent {% endblock %}
+{% block content %}
+
+      <p>Here are some of the most recent similarity webs.</p>
+      
+      <div id="recent"></div>
+
+{% endblock %}
+{% block script %}
+<script>
+$(document).ready(initRecent);
+</script>
+{% endblock %}
