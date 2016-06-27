@@ -1,7 +1,8 @@
 import os
 import logging
+import json
+
 from xml.dom import minidom
-from django.utils import simplejson
 from google.appengine.api import memcache
 
 import bottlenose
@@ -85,5 +86,5 @@ def calculate_books_web(asin):
   web = {'book_details': book_details, 'book_graph': book_graph, 'asin': asin}
   book_web = models.BookWeb(key_name=asin)
   book_web.title = book_details[asin]['title']
-  book_web.json = simplejson.dumps(web)
+  book_web.json = json.dumps(web)
   book_web.put()

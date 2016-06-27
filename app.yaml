@@ -1,9 +1,16 @@
 application: similarbooks
 version: 1
-runtime: python
+runtime: python27
 api_version: 1
+threadsafe: true
 
 default_expiration: "30d"
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
 
 builtins:
 - deferred: on
@@ -42,4 +49,4 @@ handlers:
   upload: static/js/(.*\.js)
 
 - url: /.*
-  script: main.py
+  script: main.app
